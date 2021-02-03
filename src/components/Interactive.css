@@ -1,0 +1,220 @@
+.animated-text {
+    display: flex;
+    font-size: 30px;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+.letter-span {
+    opacity: 0;
+    transform: translateY(20px);
+    display: block;
+}
+.letter-span.empty {
+    padding-right: 10px;
+}
+.letter-span.animate-text-up {
+    animation: animate-text .3s ease-in-out forwards;
+}
+@keyframes animate-text {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) rotate(12deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-8px) rotate(-12deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+.animate-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+.animate-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.interactive-text {
+    width: 600px;
+    max-width: 80%;
+}
+.interactive-box {
+    transform: rotate3d(0.5, -0.866, 0, 15deg) rotateZ(-1deg) scale(0);
+    animation: scale-message-up .4s forwards;
+    animation-delay: 2.5s;
+}
+.interactive-box .box {
+    background-color: #02203c;
+    border: 2px solid #15314b;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 40px -17.5px rgb(0 0 0 / 40%), 46.2px 57.5px 70px -7.5px rgb(0 0 0 / 50%);
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.box-title {
+    background-color: #15314b;
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 40%);
+    height: 35px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+.box-title .button {
+    background-color: #0046c7;
+    padding: 2px 13px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.box-content {
+    padding: 10px;
+    width: 100%;
+    height: calc(100% - 38px);
+}
+.yellow {
+    background-color: #78c078;
+}
+.gold {
+    background-color: #be8a28;
+}
+.light-blue {
+    background-color: #48aca2;
+}
+.blue {
+    background-color: #5e5efb;
+}
+.purple {
+    background-color: #5a395a;
+}
+.green {
+    background-color: #78c078;
+}
+.code-item {
+    height: 16px;
+    border-radius: 12px;
+    margin-right: 4px;
+    margin-bottom: 6px;
+}
+.box-content .code-row {
+    width: 0;
+    overflow: hidden;
+    transition: width .7s;
+}
+.box-content>.animate-code {
+    width: 100%;
+}
+.loading-output {
+    width: 100%;
+    height: 100%;
+}
+.spinner {
+    border: 4px solid;
+    border-radius: 50%;
+    border-color: #fff transparent;
+    animation: spin 1s infinite linear;
+    display: block;
+    width: 65px;
+    height: 65px;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.output-message {
+    width: 100%;
+    height: 50px;
+    background-color: #15314b;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    position: relative;
+    animation: scale-message-up .3s forwards;
+    transform-origin: scale(0);
+    opacity: 0;
+}
+@keyframes scale-message-up {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+.output-message svg {
+    width: 32px;
+    margin-left: 10px;
+}
+.output-message.success path, .output-message.success circle {
+    stroke: #3f8854;
+}
+.output-message.error path, .output-message.error circle {
+    stroke: #c54242;
+}
+.output-message::after {
+    position: absolute;
+    height: 20px;
+    width: 60%;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    left: 60px;
+    border-radius: 6px;
+}
+.output-message.error::after {
+    background-color: #c54242;
+}
+.output-message.success::after {
+    background-color: #3f8854;
+}
+.output-message.change {
+    animation: change 1s forwards;
+    opacity: 1;
+}
+@keyframes change {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    35% {
+        transform: translateY(-25px) scale(1, 1.4);
+    }
+    50% {
+        transform: translateY(25px) scale(1, .3);
+    }
+    80% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+.error .success-svg {
+    display: none;
+}
+.success .error-svg {
+    display: none;
+}
+.erroring {
+    background-color: red;
+}
+
+@media only screen and (max-width: 800px) {
+    .animated-text {
+        font-size: 25px;
+    }
+    .interactive-box .box {
+        margin-top: 15px;
+    }
+}
