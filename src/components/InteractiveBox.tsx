@@ -3,248 +3,256 @@ import { Box } from './Box';
 import { Output } from './Output';
 
 const codeLines = [
-    [
-        {
-            margin: 0,
-            items: [
-                {
-                    width: '58px',
-                    color: 'green'
-                },
-                {
-                    width: '45px',
-                    color: 'light-blue'
-                },
-                {
-                    width: '65px',
-                    color: 'gold'
-                }
-            ]
-        },
-        {
-            margin: '20px',
-            items: [
-                {
-                    width: '35px',
-                    color: 'green'
-                },
-                {
-                    width: '55px',
-                    color: 'blue'
-                },
-                {
-                    width: '30px',
-                    color: 'green'
-                },
-                {
-                    width: '60px',
-                    color: 'green'
-                }
-            ]
-        },
-        {
-            margin: '40px',
-            items: [
-                {
-                    width: '70px',
-                    color: 'purple'
-                },
-                {
-                    width: '25px',
-                    color: 'green'
-                },
-                {
-                    width: '45px',
-                    color: 'green'
-                },
-                {
-                    width: '60px',
-                    color: 'green'
-                }
-            ]
-        },
-        {
-            margin: '40px',
-            items: [
-                {
-                    width: '25px',
-                    color: 'green'
-                },
-                {
-                    width: '45px',
-                    color: 'green'
-                },
-                {
-                    width: '38px',
-                    color: 'green'
-                },
-                {
-                    width: '30px',
-                    color: 'gold'
-                }
-            ]
-        },
-        {
-            margin: '20px',
-            items: [
-                {
-                    width: '75px',
-                    color: 'blue'
-                },
-                {
-                    width: '50px',
-                    color: 'gold'
-                },
-            ]
-        },
-        {
-            margin: 0,
-            items: [
-                {
-                    width: '0px',
-                    color: 'blue'
-                },
-            ],
-            type: 'break'
-        },
-        {
-            margin: 0,
-            items: [
-                {
-                    width: '40px',
-                    color: 'gold'
-                },
-                {
-                    width: '30px',
-                    color: 'purple'
-                },
-                {
-                    width: '55px',
-                    color: 'gold'
-                }
-            ]
-        },
-        {
-            margin: '20px',
-            items: [
-                {
-                    width: '40px',
-                    color: 'green'
-                },
-                {
-                    width: '40px',
-                    color: 'gold'
-                },
-                {
-                    width: '70px',
-                    color: 'gold'
-                },
-                {
-                    width: '30px',
-                    color: 'gold'
-                }
-            ]
-        },
-        {
-            margin: '40px',
-            items: [
-                {
-                    width: '35px',
-                    color: 'gold'
-                },
-                {
-                    width: '35px',
-                    color: 'gold'
-                },
-                {
-                    width: '50px',
-                    color: 'blue'
-                },
-                {
-                    width: '30px',
-                    color: 'purple'
-                }
-            ]
-        },
-        {
-            margin: '40px',
-            items: [
-                {
-                    width: '50px',
-                    color: 'green'
-                },
-                {
-                    width: '30px',
-                    color: 'green'
-                },
-                {
-                    width: '60px',
-                    color: 'green'
-                },
-                {
-                    width: '20px',
-                    color: 'blue'
-                }
-            ]
-        },
-        {
-            margin: '20px',
-            items: [
-                {
-                    width: '35px',
-                    color: 'blue'
-                },
-                {
-                    width: '40px',
-                    color: 'green'
-                },
-            ]
-        },
-    ]
+    {
+        margin: 0,
+        items: [
+            {
+                width: '58px',
+                color: 'green'
+            },
+            {
+                width: '45px',
+                color: 'light-blue'
+            },
+            {
+                width: '65px',
+                color: 'gold'
+            }
+        ]
+    },
+    {
+        margin: '20px',
+        items: [
+            {
+                width: '35px',
+                color: 'green'
+            },
+            {
+                width: '55px',
+                color: 'blue'
+            },
+            {
+                width: '30px',
+                color: 'green'
+            },
+            {
+                width: '60px',
+                color: 'green'
+            }
+        ]
+    },
+    {
+        margin: '40px',
+        items: [
+            {
+                width: '70px',
+                color: 'purple'
+            },
+            {
+                width: '25px',
+                color: 'green'
+            },
+            {
+                width: '45px',
+                color: 'green'
+            },
+            {
+                width: '60px',
+                color: 'green'
+            }
+        ]
+    },
+    {
+        margin: '40px',
+        items: [
+            {
+                width: '25px',
+                color: 'green'
+            },
+            {
+                width: '45px',
+                color: 'green'
+            },
+            {
+                width: '38px',
+                color: 'green'
+            },
+            {
+                width: '30px',
+                color: 'gold'
+            }
+        ]
+    },
+    {
+        margin: '20px',
+        items: [
+            {
+                width: '75px',
+                color: 'blue'
+            },
+            {
+                width: '50px',
+                color: 'gold'
+            },
+        ]
+    },
+    {
+        margin: 0,
+        items: [
+            {
+                width: '0px',
+                color: 'blue'
+            },
+        ],
+        type: 'break'
+    },
+    {
+        margin: 0,
+        items: [
+            {
+                width: '40px',
+                color: 'gold'
+            },
+            {
+                width: '30px',
+                color: 'purple'
+            },
+            {
+                width: '55px',
+                color: 'gold'
+            }
+        ]
+    },
+    {
+        margin: '20px',
+        items: [
+            {
+                width: '40px',
+                color: 'green'
+            },
+            {
+                width: '40px',
+                color: 'gold'
+            },
+            {
+                width: '70px',
+                color: 'gold'
+            },
+            {
+                width: '30px',
+                color: 'gold'
+            }
+        ]
+    },
+    {
+        margin: '40px',
+        items: [
+            {
+                width: '35px',
+                color: 'gold'
+            },
+            {
+                width: '35px',
+                color: 'gold'
+            },
+            {
+                width: '50px',
+                color: 'blue'
+            },
+            {
+                width: '30px',
+                color: 'purple'
+            }
+        ]
+    },
+    {
+        margin: '40px',
+        items: [
+            {
+                width: '50px',
+                color: 'green'
+            },
+            {
+                width: '30px',
+                color: 'green'
+            },
+            {
+                width: '60px',
+                color: 'green'
+            },
+            {
+                width: '20px',
+                color: 'blue'
+            }
+        ]
+    },
+    {
+        margin: '20px',
+        items: [
+            {
+                width: '35px',
+                color: 'blue'
+            },
+            {
+                width: '40px',
+                color: 'green'
+            },
+        ]
+    },
 ]
 
 export const InteractiveBox = () => {
-    const codeRef: any = useRef([]);
     const rowRef: any = useRef([]);
-    const allCodeDivs: any = useRef([]);
     const [active, setActive] = useState(false);
     const [count, setCount] = useState(-1);
     const [output, setOutput]: any = useState(null);
+    const [code, setCode]: any = useState(codeLines);
+    const [rows, setRows]: any = useState([]);
+    const [error, setError]: any = useState(true);
+    const buttonRef: any = useRef(null);
 
     const setRandomErrorInCode = () => {
-        const length = allCodeDivs.current.length;
-        const randomIndex = (Math.floor(Math.random() * length - 1));
-        const randomSnippet = allCodeDivs?.current[randomIndex].current.classList.add('erroring');
+        const dummy = code;
+        const randomRowIndex = Math.floor(Math.random() * (dummy.length - 1));
+        const randomItemIndex = Math.floor(Math.random() * (dummy[randomRowIndex].items.length - 1));
+        console.log(dummy[randomRowIndex].items[randomItemIndex]);
+        dummy[randomRowIndex].items[randomItemIndex].erroring = true;
+        setCode((previous: any) => [...dummy, ...[]]);
+    }
+
+    const fixError = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        e.currentTarget.classList.remove('erroring');
+        e.currentTarget.classList.add('success');
+        setError(false);
+        resetOutput();
     }
 
     useEffect(() => {
         const rows: any = [];
-        codeLines.forEach(row => {
-            const tempRows: any = [];
-            row.forEach(row => {
-                if(row.type === 'break') {
-                    tempRows.push(<br/>);
-                    return
-                }
-                const lineRef: any = createRef();
-                tempRows.push(
-                    <div className="code-row flex" style={{marginLeft: row.margin}} ref={lineRef}>
-                        {row.items.map(item => {
-                            const ref: any = createRef();
-                            allCodeDivs.current.push(ref);
-                            return <div ref={ref} className={`code-item ${item.color}`} style={{minWidth: item.width}} />
+        code.forEach((row: any) => {
+            if(row.type === 'break') {
+                rows.push(<br/>);
+                return
+            }
+            const lineRef: any = createRef();
+            rows.push(
+                <div className="relative" style={{position: 'relative'}}>
+                    <div className="code-row flex" style={{paddingLeft: row.margin}} ref={lineRef}>
+                        {row.items.map((item: any) => {
+                            return (
+                                <div className={`code-item ${item.color}${item.erroring ? ' erroring' : ''}`} style={{minWidth: item.width}} onClick={item.erroring ? (e) => fixError(e) : (e) => {}}/>
+                            )
                         })}
                     </div>
-                )
-                rowRef.current.push(lineRef);
-            })
-            rows.push(tempRows);
+                </div>
+            )
+            rowRef.current.push(lineRef);
         })
-        codeRef.current = rows;
+        setRows((previous: any) => [...rows, ...[]]);
         setTimeout(() => {
             setActive(true);
         }, 2400);
-    }, []);
+    }, [code]);
 
     useEffect(() => {
         if(!active) return;
@@ -266,7 +274,6 @@ export const InteractiveBox = () => {
 
         setTimeout(() => {
             setOutput(true);
-            codeRef?.current[Math.floor(Math.random() * codeRef?.current?.length)]?.classList?.add('erroring');
         }, 1000);
     }
 
@@ -274,8 +281,8 @@ export const InteractiveBox = () => {
         <div className="rotation" style={{transform: 'rotate3d(0.5, -0.866, 0, 15deg) rotateZ(-1deg)'}}>
             <div className="interactive-box">
                 <div className="box-row flex flex-wrap justify-center">
-                    <Box text={'Input'} onClick={resetOutput}>
-                        {codeRef.current}
+                    <Box text={'Input'} onClick={resetOutput} buttonRef={buttonRef}>
+                        {rows}
                     </Box>
                     <Box text={'Output'}>
                         {output === false ? (
@@ -284,7 +291,9 @@ export const InteractiveBox = () => {
                             </div>
                         ) : null}
                         {output === true ? (
-                            <Output />
+                            <Output 
+                                error={error}
+                            />
                         ) : null}
                     </Box>
                 </div>
