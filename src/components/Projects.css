@@ -27,6 +27,7 @@
 .project-image {
     width: 400px;
     min-width: 400px;
+    max-height: 232px;
     overflow: hidden;
     position: relative;
     border-radius: 5px;
