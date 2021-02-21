@@ -5,15 +5,17 @@ interface Props {
     children: any;
 }
 
-export const AnimateUp: React.FC<Props> = ({delay, children}) => {
+export const AnimateUp: React.FC<Props> = ({delay=0, children}) => {
     const [active, setActive] = useState(false);
 
     useEffect(() => {
-        setActive(true);
+        setTimeout(() => {
+            setActive(true);
+        }, delay);
     }, []);
 
     return(
-        <div className={`animate-up${active ? ' active' : ''}`} style={{transitionDelay: `${delay}ms`}}>
+        <div className={`animate-up${active ? ' active' : ''}`}>
             {children}
         </div>
     )

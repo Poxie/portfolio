@@ -3,9 +3,10 @@ import './Interactive.css';
 
 interface Props {
     text: string;
+    delay?: number;
 }
 
-export const AnimatedText: React.FC<Props> = ({text}) => {
+export const AnimatedText: React.FC<Props> = ({text, delay=0}) => {
     const [count, setCount] = useState(-1);
     const [active, setActive] = useState(false);
     const letters: any = useRef([]);
@@ -25,11 +26,13 @@ export const AnimatedText: React.FC<Props> = ({text}) => {
     }, []);
 
     useEffect(() => {
-        if(intervalRef.current) return;
-        const interval = setInterval(() => {
-            setCount(previous => previous + 1);
-        }, 50)
-        intervalRef.current = interval;
+        setTimeout(() => {
+            if(intervalRef.current) return;
+            const interval = setInterval(() => {
+                setCount(previous => previous + 1);
+            }, 50)
+            intervalRef.current = interval;
+        }, delay)
     }, [active]);
     
     useEffect(() => {
