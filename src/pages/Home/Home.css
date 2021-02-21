@@ -157,6 +157,19 @@ canvas {
         }
     }
 }
+@media only screen and (max-width: 600px) {
+    .bottom-container {
+        padding-bottom: 20px !important;
+    }
+    .bottom-container .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom-container .header .animate-up {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 .bottom {
     background-color: var(--primary-color);
@@ -170,8 +183,7 @@ canvas {
     color: #fff;
     font-family: 'Heebo', sans-serif;
     width: 850px;
-    min-width: 850px;
-    max-width: 80%;
+    max-width: 100%;
     border-radius: 12px;
     padding: 0 30px;
     transform: translateY(-35px);

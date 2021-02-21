@@ -1,3 +1,7 @@
+.interactive .section-content {
+    min-height: 320px;
+}
+
 .animated-text {
     display: flex;
     font-size: 30px;
@@ -34,6 +38,7 @@
     opacity: 0;
     transform: translateY(20px);
     transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    max-width: 100%;
 }
 .animate-up.active {
     opacity: 1;
@@ -49,15 +54,17 @@
     animation: scale-message-up .4s forwards;
     animation-delay: 2.5s;
 }
-.interactive-box .box {
+.box {
     background-color: #02203c;
     border: 2px solid #15314b;
     color: #fff;
     width: 300px;
-    height: 300px;
+    min-height: 298px;
+    max-height: 300px;
     box-shadow: 0px 0px 40px -17.5px rgb(0 0 0 / 40%), 46.2px 57.5px 70px -7.5px rgb(0 0 0 / 50%);
     margin-right: 8px;
     border-radius: 8px;
+    overflow: hidden;
 }
 .box-title {
     background-color: #15314b;
@@ -72,6 +79,9 @@
     border-radius: 4px;
     font-size: 14px;
     cursor: pointer;
+}
+.box-title .button.notice {
+    animation: notice-me 1s infinite ease-in-out forwards;
 }
 .box-content {
     padding: 10px;
@@ -107,8 +117,33 @@
     overflow: hidden;
     transition: width .7s;
 }
-.box-content>.animate-code {
+.box-content .animate-code {
     width: 100%;
+}
+.code-row svg {
+    fill: rgb(0, 109, 172);
+    position: absolute;
+    z-index: 1;
+    width: 35px;
+    transform: translateY(-50%);
+    animation: exclaim 1.5s infinite forwards ease-in-out;
+}
+@keyframes exclaim {
+    0% {
+        top: -10px;
+    }
+    21% {
+        top: -14px;
+    }
+    46%, 51% {
+        top: -10px;
+    }
+    72% {
+        top: -14px;
+    }
+    100% {
+        top: -10px;
+    }
 }
 .loading-output {
     width: 100%;
@@ -208,6 +243,28 @@
 }
 .erroring {
     background-color: red;
+    animation: notice-me 1s infinite ease-in-out;
+    cursor: pointer;
+}
+.box .success {
+    color: #5e5efb;
+}
+@keyframes notice-me {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(.95);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -216,5 +273,8 @@
     }
     .interactive-box .box {
         margin-top: 15px;
+    }
+    .interactive .section-content {
+        min-height: 932px;
     }
 }
