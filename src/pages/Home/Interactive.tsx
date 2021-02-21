@@ -11,7 +11,7 @@ export const Interactive = () => {
 
     const checkDistanceFromTop = () => {
         const position = container?.current?.getBoundingClientRect();
-        const distance = position.top;
+        const distance = position?.top;
         if(distance <= 600) {
             setAnimate(true);
         }
@@ -25,7 +25,7 @@ export const Interactive = () => {
 
     return(
         <Section className="interactive">
-            <SectionContent style={{width: '1300px'}}>
+            <SectionContent style={{width: '1300px', paddingBottom: '80px'}}>
                 <div className="interactive-content flex flex-wrap justify-center" ref={container}>
                     {animate ? (
                         <>
@@ -34,7 +34,7 @@ export const Interactive = () => {
                                     text={'I love creating interactive websites.'}
                                 />
                                 <AnimateUp delay={2500}>
-                                    <span>Whatever the website is, I enjoy making it. However, my personal favorite is interactive ones! Creating animations is always so fun and educational. For each animation I make, I develop even more! Teamwork is an essential part in creating beauty, just edit my easy-to-read code!</span>
+                                    <span>Whatever the website is, I enjoy making it. However, my personal favorite is interactive ones! Creating animations is always so fun and educational. For each animation I make, I develop even more! Teamwork is an essential part in creating beauty, just edit my easy-to-read code! Can you find all the interactiveness in the boxes to the right?</span>
                                 </AnimateUp>
                             </div>
                             <InteractiveBox />
