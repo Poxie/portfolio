@@ -1,0 +1,29 @@
+.resume {
+    padding-top: 50px;
+}
+.resume .resume-column {
+    max-width: 300px;
+    margin-bottom: 40px;
+}
+.resume .full-column {
+    margin-right: 40px;
+}
+.resume .column-header h1 {
+    color: #647a81;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+}
+.resume .resume-item h1 {
+    font-size: 20px;
+    color: #222222;
+    margin: 0;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.resume-item {
+    margin-bottom: 20px;
+}
+.full-column:last-child .resume-column {
+    max-width: 450px;
+}
