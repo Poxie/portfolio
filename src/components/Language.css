@@ -1,0 +1,132 @@
+.language-selector {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: transform .4s, opacity .2s;
+    max-width: 100%;
+    overflow: auto;
+}
+.animate-in.language-selector {
+    opacity: 1;
+    transform: translateY(0);
+}
+.languages {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.language-selector .language-item, .projects .button {
+    background-color: #fff;
+    padding: 8px 14px;
+    white-space: nowrap;
+    border-radius: 120px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    color: #23272a;
+    cursor: pointer;
+    transition: box-shadow .2s;
+}
+.language-item:hover {
+    box-shadow: 0 9px 11px rgb(0 0 0 / 10%);
+}
+.language-item.active, .projects .button {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.percentage {
+    width: 100%;
+}
+
+.graph.animate-in {
+    animation: animate-in .5s ease-in-out forwards;
+    transform: scale(0);
+}
+.animate-out-graph .graph:nth-of-type(1) {
+    animation: animate-out .5s ease-in-out forwards !important;
+    transform: scale(1);
+}
+.animate-out-graph .graph:nth-of-type(2) {
+    animation: animate-out .5s ease-in-out forwards !important;
+    transform: scale(1);
+    animation-delay: 150ms !important;
+}
+.animate-out-graph .graph:nth-of-type(3) {
+    animation: animate-out .5s ease-in-out forwards !important;
+    transform: scale(1);
+    animation-delay: 300ms !important;
+}
+@keyframes animate-out {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes animate-in {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.graph {
+    position: relative;
+}
+.graph-percent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+}
+
+.circle-chart__circle {
+    animation: circle-chart-fill 1s reverse; /* 1 */ 
+    transform: rotate(-90deg); /* 2, 3 */
+    transform-origin: center; /* 4 */
+}
+.circle-chart__circle--negative {
+    transform: rotate(-90deg) scale(1,-1); /* 1, 2, 3 */
+}
+
+.circle-chart__info {
+    animation: circle-chart-appear 1s forwards;
+    opacity: 0;
+    transform: translateY(0.3em);
+}
+
+@keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 200; }
+}
+
+@keyframes circle-chart-appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.graph-text {
+    position: absolute;
+    bottom: -25px;
+}
+.graphs .graph {
+    margin-right: 25px;
+}
+
+@media only screen and (max-width: 800px) {
+    .language-selector {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 20px 0 30px 0 !important;
+    }
+    .language-container {
+        margin-bottom: 30px !important;
+    }
+    .language {
+        left: 10px !important;
+        top: -15px !important;
+    }
+    .languages {
+        max-width: 90%;
+    }
+}
