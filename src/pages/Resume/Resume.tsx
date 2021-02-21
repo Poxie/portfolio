@@ -11,7 +11,7 @@ export const Resume = () => {
                     <ResumeItem
                         title={'Technical skills'}
                         description={'Proficient with:'}
-                        dotList={['JavaScript (ES6+)', 'React / JSX', 'Node.js', 'MySQL', 'HTML5', 'CSS3 + Sass', 'Git']}
+                        dotList={['JavaScript (ES6+)', 'React / JSX', 'Node.js', 'MySQL', 'HTML5', 'CSS3 + Sass', 'Git', 'APIs']}
                     />
                     <ResumeItem
                         title={'Soft skills'}
@@ -41,6 +41,11 @@ export const Resume = () => {
                         title={'Todo List'}
                         description={'A todo list, made purely in React. It uses localstorage to store the todos and columns.'}
                         dotList={['JavaScript', 'TypeScript', 'React', 'CSS']}
+                    />
+                    <ResumeItem
+                        title={'APIs'}
+                        description={'I have a lot of knowledge about APIs. Both using them, as well as creating them. A lot of what I create involves home-made APIs. For me, It\'s an essential skill to have.'}
+                        dotList={['Python', 'Node.js', 'Express.js']}
                     />
                 </ResumeColumn>
                 <ResumeColumn title={'Fun Facts'}>
