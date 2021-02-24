@@ -14,7 +14,7 @@ canvas {
 .main-section .modal {
     height: 296px;
 }
-.modal {
+.home .modal {
     z-index: 14;
     position: absolute;
     left: 50%;
@@ -27,12 +27,12 @@ canvas {
     transition: transform .5s, opacity .5s;
     color: #363636;
 }
+.home .modal>div:first-child {
+    padding: 50px;
+}
 .modal.minimize {
     transform: translate(-50%,-50%) scale(0);
     opacity: 0;
-}
-.modal>div {
-    padding: 50px;
 }
 .modal-icon {
     width: 140px;
